@@ -1,0 +1,28 @@
+<div class="dice-tooltip soot-die-tooltip">
+  {{#if attribute}}<div class="chat-label label-stripe-chat">{{attribute}}</div>{{/if}}
+	<div class="chat-label-roll label-stripe-chat-roll">
+      {{{label_text}}} 
+  </div>
+
+  <div class="die {{roll_status}}">
+    {{result_message}}
+  </div>
+
+  <ol class="dice-rolls">
+    {{#each this.rolls}}
+    {{#if this.result}}
+    <li class="roll die nocolor d6"><img src="modules/foundryvtt-sootroller/artwork/soot-d6-{{this.result}}.png" /></li>
+    {{/if}}
+    {{/each}}
+  </ol>
+
+  {{#if oppRolls.length}}
+  <ol class="dice-rolls">
+    {{#each this.oppRolls}}
+    {{#if this.result}}
+    <li class="roll die gray d6"><img src="modules/foundryvtt-sootroller/artwork/soot-d6-{{this.result}}.png" /></li>
+    {{/if}}
+    {{/each}}
+  </ol>
+  {{/if}}
+</div>

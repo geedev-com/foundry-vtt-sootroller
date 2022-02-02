@@ -1,0 +1,1 @@
+1.1.1   Difficulty tests, opposed tests, longhand success counting.

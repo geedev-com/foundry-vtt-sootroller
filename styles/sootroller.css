@@ -1,0 +1,237 @@
+:root {
+	--almost_white: #eeefff;
+	--red: #ff0000;
+	--holoblue: #33b5e5;
+	--holobluemed: #84d2ef;
+	--holobluelt: #ade1f4;
+	--redmed: #ff6666;
+	--redlt: #ffb2b2;
+	--darkblue: #001324;
+}
+* .soot-die-tooltip header {
+  margin-bottom: 10px;
+}
+* .soot-die-tooltip ul {
+  list-style: none;
+}
+* .soot-die-tooltip .dialog-buttons {
+	margin-top: 5px;
+}
+* .soot-die-tooltip textarea {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+* .soot-die-tooltip td {
+  padding: 5px;
+}
+* .soot-die-tooltip section {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+* section > * .soot-die-tooltip:not(.label-stripe) {
+  margin-right: 10px;
+}
+* section > * .soot-die-tooltip:not(.label-stripe):last-child {
+  margin-right: 0px;
+}
+* .soot-die-tooltip section .grow-one {
+  flex-grow: 1;
+}
+* .soot-die-tooltip section .grow-two {
+  flex-grow: 2;
+}
+* .soot-die-tooltip section.experience {
+  margin-bottom: 0px;
+  justify-content: center;
+}
+* .soot-die-tooltip nav {
+  margin-bottom: 10px;
+}
+* .soot-die-tooltip .editor,
+* .soot-die-tooltip .editor-content {
+  min-height: 280px;
+}
+* .soot-die-tooltip .flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+* .soot-die-tooltip .flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+* .soot-die-tooltip .black-label {
+  background-color: #191813;
+  color: #EEEFFF;
+  font-size: 21px;
+  text-align: center;
+  padding: 0px 5px;
+  height: 30px !important;
+}
+* .soot-die-tooltip .gray-label {
+  background-color: #999;
+  color: #191813;
+  font-size: 21px;
+  text-align: center;
+  padding: 0px 5px;
+  height: 30px !important;
+}
+* .soot-die-tooltip .chat-label {
+  background-color: #191813;
+  color: #EEEFFF;
+  font-size: 21px;
+  text-align: center;
+  padding: 0px 5px;
+  height: 30px !important;
+}
+* .soot-die-tooltip .chat-label-small {
+  background-color: #999;
+  color: #191813;
+  font-size: small;
+  text-align: center;
+  padding: 3px 5px;
+  height: 20px !important;
+}
+* .soot-die-tooltip .chat-label-roll {
+  background-color: #ccc;
+  color: #191813;
+  font-size: small;
+  padding: 3px 5px;
+}
+* .soot-die-tooltip .chat-label-small-red {
+  background-color: red;
+  color: #191813;
+  font-size: small;
+  text-align: center;
+  padding: 3px 5px;
+}
+* .soot-die-tooltip .label-stripe {
+  text-transform: uppercase;
+  background-color: #191813;
+  color: #EEEFFF;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  font-weight: bold;
+}
+* .soot-die-tooltip .label-stripe .hoverlink {
+  cursor: pointer;
+  transition: filter 0.1s;
+}
+* .soot-die-tooltip .label-stripe .hoverlink:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
+}
+* .soot-die-tooltip .label-stripe-red {
+  text-transform: uppercase;
+  background-color: #191813;
+  color: red;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  font-weight: bold;
+}
+* .soot-die-tooltip .label-stripe-gray {
+  text-transform: uppercase;
+  background-color: #92a6ad;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  font-weight: bold;
+}
+* .soot-die-tooltip .label-stripe-chat {
+  text-transform: uppercase;
+  background-color: #191813;
+  color: #EEEFFF;
+  margin-bottom: 10px;
+  position: relative;
+  padding-top: 3px;
+  display: flex;
+  font-weight: bold;
+  margin: 0;
+}
+* .soot-die-tooltip .label-stripe-chat-small {
+  background-color: #ccc;
+  color: #191813;
+  position: relative;
+  padding-top: 3px;
+  display: flex;
+  font-weight: bold;
+}
+* .soot-die-tooltip .label-stripe-chat-roll {
+  background-color: #ccc;
+  color: #191813;
+  position: relative;
+  padding-top: 3px;
+  display: flex;
+}
+* .soot-die-tooltip .label-stripe-chat-small-red {
+  background-color: red;
+  color: #191813;
+  position: relative;
+  padding-top: 3px;
+  display: flex;
+  font-weight: bold;
+}
+* .soot-die-tooltip .description {
+  font-style: italic;
+}
+* .soot-die-tooltip .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #191813;
+  color: #EEEFFF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 9999;
+}
+* .soot-die-tooltip .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+* .soot-die-tooltip .die {
+  font-weight: bold;
+  font-size: large;
+  margin-top: 10px;
+}
+* .soot-die-tooltip .die.great,
+* .soot-die-tooltip .die.critical-resist,
+* .soot-die-tooltip .die.critical-success {
+  color: #12a012;
+}
+* .soot-die-tooltip .die.nodamage,
+* .soot-die-tooltip .die.standard,
+* .soot-die-tooltip .die.resist,
+* .soot-die-tooltip .die.success {
+  color: #008000;
+}
+* .soot-die-tooltip .die.malfunction,
+* .soot-die-tooltip .die.limited,
+* .soot-die-tooltip .die.partial-success {
+  color: #04578f;
+}
+* .soot-die-tooltip .die.damaged,
+* .soot-die-tooltip .die.poor,
+* .soot-die-tooltip .die.failure {
+  color: red;
+}
+* .dice-tooltip.soot-die-tooltip .dice-rolls .roll.die.d6.black {
+  background-image: url(../artwork/d6-black.svg) !important;
+  color: var(--almost_white);
+}
+* .dice-tooltip.soot-die-tooltip .dice-rolls .roll.die.gray {
+  background-image: url(../artwork/d6-grey.svg) !important;
+}
+* .dice-tooltip.soot-die-tooltip .dice-rolls .roll.die.nocolor {
+  background-image: none !important;
+}
+

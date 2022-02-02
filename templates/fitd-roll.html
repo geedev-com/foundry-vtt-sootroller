@@ -1,0 +1,78 @@
+<div class="dice-tooltip soot-die-tooltip">
+    {{#if attribute}}<div class="chat-label label-stripe-chat">{{attribute}}</div>{{/if}}
+	<div class="chat-label-small label-stripe-chat-small">
+      {{{localize position_localize}}} | {{{localize effect_localize}}}
+    </div>
+
+  {{#if zeromode}}
+    <div class="chat-label-small-red label-stripe-chat-small-red">
+      {{{localize "SootRoller.RollZeromode"}}}
+    </div>
+  {{/if}}
+
+  {{#if (eq roll_status "critical-success")}}
+  <div class="die {{roll_status}}">{{localize "SootRoller.RollCriticalSuccess"}}</div>
+  <div class="description">
+    <p>{{{localize "SootRoller.RollDoWithIncreasedEffect"}}}</p>
+	
+	{{#if (eq position "desperate")}}
+	<p>{{{localize "SootRoller.RollXP"}}}</p>
+	{{/if}}
+  </div>
+  {{/if}}
+
+  {{#if (eq roll_status "success")}}
+  <div class="die {{roll_status}}">{{localize "SootRoller.RollSuccess"}}</div>
+  <div class="description">
+    <p>{{{localize "SootRoller.RollDo"}}}</p>
+    
+	{{#if (eq position "desperate")}}
+	<p>{{{localize "SootRoller.RollXP"}}}</p>
+	{{/if}}
+  </div>
+  {{/if}}
+
+  {{#if (eq roll_status "partial-success")}}
+  <div class="die {{roll_status}}">{{localize "SootRoller.RollPartialSuccess"}}</div>
+  <div class="description">
+    <p>
+      {{#if (eq position "controlled")}}
+      {{{localize "SootRoller.RollPartialSuccessPositionControlled"}}}
+      {{else if (eq position "risky")}}
+      {{{localize "SootRoller.RollPartialSuccessPositionRisky"}}}
+      {{else}}
+      {{{localize "SootRoller.RollPartialSuccessPosition"}}}
+      {{/if}}
+    </p>
+	{{#if (eq position "desperate")}}
+	<p>{{{localize "SootRoller.RollXP"}}}</p>
+	{{/if}}
+  </div>
+  {{/if}}
+
+  {{#if (eq roll_status "failure")}}
+  <div class="die {{roll_status}}">{{localize "SootRoller.RollFailure"}}</div>
+  <div class="description">
+    <p>
+      {{#if (eq position "controlled")}}
+      {{{localize "SootRoller.RollFailurePositionControlled"}}}
+      {{else if (eq position "risky")}}
+      {{{localize "SootRoller.RollFailurePositionRisky"}}}
+      {{else}}
+      {{{localize "SootRoller.RollFailurePositionDesperate"}}}
+      {{/if}}
+    </p>
+	{{#if (eq position "desperate")}}
+	<p>{{{localize "SootRoller.RollXP"}}}</p>
+	{{/if}}
+  </div>
+  {{/if}}
+
+  <ol class="dice-rolls">
+    {{#each this.rolls}}
+    {{#if this.result}}
+    <li class="roll die sootd6 {{../this.color}}"{{#if (eq this.result 6)}}style="color: green;"{{else if (eq this.result 3)}}style="color: red;"{{else if (eq this.result 2)}}style="color: red;"{{else if (eq this.result 1)}}style="color: red;"{{/if}}>{{{this.result}}}</li>
+    {{/if}}
+    {{/each}}
+  </ol>
+</div>
